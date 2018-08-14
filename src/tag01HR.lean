@@ -240,7 +240,7 @@ begin
   let F : set Rr := set.range f,
   have H2 : ⋃₀ (Spec.D' '' (set.range f)) = set.univ,
     rw [←Hcoverr,←set.image_univ,←set.image_comp],
-    simp [set.Union_eq_sUnion_image],
+    simp [set.Union_eq_sUnion_range],
   rw [tag00E0.lemma16] at H2,
   have H3 : Spec.V (set.range f) = ∅,
     rw [←set.compl_univ,←H2,set.compl_compl],
