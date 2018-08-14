@@ -108,7 +108,7 @@ instance is_maximal_ideal.to_is_prime_ideal {α : Type u} [comm_ring α] {S : se
   from is_maximal_ideal.eq_or_univ_of_subset _ hsy,
   begin
     rw span_insert at hsx hsx2 hsy hsy2,
-    rw [set.set_eq_def, set.set_eq_def] at hsx2 hsy2,
+    rw [set.ext_iff, set.ext_iff] at hsx2 hsy2,
     cases hsx2 with hx hx,
     { left,
       rw ← hx x,

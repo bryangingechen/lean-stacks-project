@@ -74,7 +74,7 @@ begin
     simp only [mul_assoc, smul_eq_mul, mul_pow, mul_left_comm _ (sum s _ ^ (sum s n + 1))],
     have : span ↑(image (λ a, f a ^ n a) s) ⊆ span ↑(image (λ a, f a ^ n a) (insert a s)) := 
       span_minimal is_submodule_span (set.subset.trans 
-        (by rw [image_insert, coe_subseteq_coe]; exact subset_insert _ _) subset_span),
+        (by rw [image_insert, coe_subset]; exact subset_insert _ _) subset_span),
     exact is_submodule.smul' _ (this hi), }
 end
 
