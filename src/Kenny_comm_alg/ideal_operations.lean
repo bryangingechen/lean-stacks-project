@@ -2,6 +2,7 @@ import Kenny_comm_alg.temp
 
 universe u
 
+open is_ideal (renaming zero → zero) (renaming add → add)
 namespace is_ideal
 
 variables {α : Type u} [comm_ring α] (S S₁ S₂ S₃ S₄ T T₁ T₂ : set α)

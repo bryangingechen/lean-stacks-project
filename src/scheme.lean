@@ -11,7 +11,7 @@ import tag006E -- presheaf of types
 import tag006N -- presheaf of rings
 import tag006T -- sheaves of types
 import tag0072 -- sheaves of rings
-import Kenny_comm_alg.temp
+--import Kenny_comm_alg.temp
 import mathlib_someday.topology
 import tag01HR
 import tag007N -- poor mans direct limit

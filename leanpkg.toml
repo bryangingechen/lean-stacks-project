@@ -1,8 +1,8 @@
 [package]
 name = "lean-stacks-project"
 version = "0.1"
-lean_version = "nightly-2018-04-20"
+lean_version = "nightly"
 path = "src"
 
 [dependencies]
-mathlib = {git = "https://github.com/leanprover/mathlib", rev = "2cd640a5953ce6f6b3688f6f0eb2cac709fc583c"}
+mathlib = {git = "https://github.com/leanprover/mathlib", rev = "add16e97388a486a25569d8a905d29b5c293f3fb"}

@@ -4,6 +4,7 @@ universe u
 
 variables {α : Type u} [comm_ring α]
 
+open is_ideal (renaming zero → zero) (renaming single_zero → single_zero)
 namespace is_ideal
 
 instance : lattice.complete_lattice {S : set α // is_ideal S} :=

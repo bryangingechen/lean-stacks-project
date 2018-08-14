@@ -4,7 +4,8 @@ import data.fintype
 import data.set.finite
 import group_theory.submonoid
 import tactic.ring
-import chris_ring_lemma
+import data.nat.binomial
+--import chris_ring_lemma
 local attribute [instance] classical.prop_decidable
 -- Chris' proof of exactness
 universes u v w
@@ -74,7 +75,7 @@ begin
     simp only [mul_assoc, smul_eq_mul, mul_pow, mul_left_comm _ (sum s _ ^ (sum s n + 1))],
     have : span ↑(image (λ a, f a ^ n a) s) ⊆ span ↑(image (λ a, f a ^ n a) (insert a s)) := 
       span_minimal is_submodule_span (set.subset.trans 
-        (by rw [image_insert, coe_subseteq_coe]; exact subset_insert _ _) subset_span),
+        (by rw [image_insert, coe_subset]; exact subset_insert _ _) subset_span),
     exact is_submodule.smul' _ (this hi), }
 end
 
@@ -172,7 +173,10 @@ begin
   refine finset.sum_congr rfl (λ i _, _),
   rw [smul_eq_mul, mul_assoc, he, mul_zero],
 end
- 
+
+--set_option trace.class_instances true
+--set_option class.instance_max_depth 64
+
 lemma lemma_standard_covering₂ (f : γ → R) 
     (H : (1:R) ∈ span (↑(univ.image f) : set R)) (s : Π i, loc R (powers (f i))) :
     β s = 0 ↔ ∃ r : R, α f r = s := 

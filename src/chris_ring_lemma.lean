@@ -1,3 +1,4 @@
+/-
 import algebra.group_power algebra.big_operators data.nat.choose
 -- This appears to be a proof of the binomial theorem by Chris.
 open finset nat
@@ -37,3 +38,4 @@ by rw [_root_.pow_succ, add_pow, add_mul, finset.mul_sum, finset.mul_sum, sum_ra
     sum_range_succ, sum_range_succ', add_assoc, ← add_assoc (_ ∑ n), ← finset.sum_add_distrib, h₁, h₂, h₃]
 
 
+-/
