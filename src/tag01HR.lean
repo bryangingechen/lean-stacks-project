@@ -21,7 +21,7 @@ import tag00E8 -- standard basis on Spec(R) is quasi-compact
 import tag009P -- presheaf of rings on a basis
 import tag009L -- sheaf for finite covers on basis -> sheaf for basis
 import tag009N -- sheaf for basis -> sheaf 
-import data.equiv 
+import data.equiv.basic
 import canonical_isomorphism_nonsense
 
 universe u

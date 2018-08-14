@@ -14,7 +14,7 @@
    The issue is that there are a lot of diagrams which commute, but this needs checking.
 
 -/
-import algebra.group data.set data.equiv -- for comm diag stuff
+import algebra.group data.set data.equiv.basic -- for comm diag stuff
 import tag00DY -- definition of standard basis on Spec(R) plus proof it's a basis
 import tag00E0
 import tag00EJ -- finite cover by basic opens sheaf axiom
@@ -30,7 +30,6 @@ import tag01HS -- for "lemma_standard_open" giving map R[1/f] -> R[1/g] from D(g
 --import tag006N -- presheaves / sheaves of rings on a basis
 --import tag009P -- presheaf of rings on a basis
 --import tag009L -- sheaf for finite covers on basis -> sheaf for basis
-import data.equiv 
 import tag00EJ 
 import linear_algebra -- for span 
 
